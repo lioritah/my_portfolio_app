@@ -1,0 +1,55 @@
+
+$fade-in-animation-duration: 250ms;
+
+.tech-tile-container {
+  --tech-tile-dimens: 120px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--tech-tile-dimens);
+  height: var(--tech-tile-dimens);
+  border: 2px solid black;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  background-color: white;
+
+  .tech-tile-name {
+    position: absolute;
+    font-size: 19px;
+    opacity: 0;
+    color: black;
+    font-weight: bold;
+    transition: opacity $fade-in-animation-duration linear;
+  }
+
+  .tech-tile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: opacity $fade-in-animation-duration linear;
+  }
+}
+
+.tech-tile-container:hover {
+  .tech-tile-image {
+    opacity: 0.15;
+  }
+
+  .tech-tile-name {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 1085px) {
+  .tech-tile-container {
+    --tech-tile-dimens: 80px;
+
+    .tech-tile-name {
+      font-size: 13px;
+    }
+  }
+}

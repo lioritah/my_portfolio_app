@@ -1,0 +1,139 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@400;500;600;700;800;900&family=Lato&family=Source+Sans+Pro:wght@600&display=swap');
+
+:root {
+  --page-background-color: beige;
+  --overall-font-color: black;
+  --navbar-height: 70px;
+  --theme-color: hsl(220, 80%, 50%);
+  --go-to-page-top-button-animation-duration: 250ms;
+  --go-to-page-top-button-margin-right: 100px;
+  --go-to-page-top-button-margin-bottom: 60px;
+  --go-to-page-top-button-dimens: 55px;
+}
+
+body {
+  background-color: var(--page-background-color);
+  font-family: 'Catamaran', 'Source Sans Pro', 'sans serif';
+  color: var(--overall-font-color);
+  margin: 0;
+  padding: 0;
+  -ms-overflow-style: none;
+  scrollbar-width: none; 
+  z-index: 10;
+}
+
+.slide-to-page-top-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: var(--go-to-page-top-button-margin-bottom);
+  right: var(--go-to-page-top-button-margin-right);
+  width: var(--go-to-page-top-button-dimens);
+  height: var(--go-to-page-top-button-dimens);
+  background-color: var(--theme-color);
+  border-radius: 50%;
+  box-shadow: 0 0 11px 4px grey;
+  cursor: pointer;
+  scale: 1;
+  transition: translate var(--go-to-page-top-button-animation-duration) linear, scale var(--go-to-page-top-button-animation-duration) cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  &:hover {
+    translate: 0 -2px;
+  }
+
+  &.hide {
+    scale: 0;
+  }
+
+  & img {
+    width: 50%;
+    height: 50%;
+    margin-bottom: 2px;
+  }
+}
+
+.section-inner-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.button {
+  font-family: inherit;
+  font-size: 1.3rem;
+  padding: 8px 13px;
+  width: 60%;
+  max-width: 150px;
+  min-width: 87px;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0 0 10px 2px #ccc;
+  background-color: var(--theme-color);
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: translate 200ms linear;
+
+  &:hover {
+    translate: 0 -2px;
+  }
+}
+
+.header {
+  font-size: 45px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  position: relative;
+  margin-bottom: 45px;
+  width: 100%;
+  text-align: center;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: calc(100% + 1rem);
+    height: 5px;
+    width: 3rem;
+    background: var(--theme-color);
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+  }
+}
+
+a {
+  text-decoration: none;
+
+  &:visited {
+    color: black;
+  }
+}
+
+h2 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+section {
+  padding-bottom: 150px;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.container {
+  padding: 15px;
+}
+
+.hidden {
+  display: none;
+}
+
+@media screen and (max-width: 1085px) {
+  .slide-to-page-top-button {
+    display: none;
+  }
+}

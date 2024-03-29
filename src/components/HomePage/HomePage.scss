@@ -1,0 +1,12 @@
+
+.home-page-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  transform: translateY(calc(var(--navbar-height) + 20px));
+}
+
+.paragraph-content {
+  line-height: 1.7;
+  font-size: 24px;
+}

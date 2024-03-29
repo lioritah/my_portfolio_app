@@ -1,0 +1,38 @@
+
+.carousel-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  padding: 10px;
+
+  &.hide {
+    visibility: hidden;
+  }
+
+  svg {
+    display: block;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media screen and (max-width: 1085px) {
+  .carousel-button {
+    padding: 6px;
+
+    svg {
+      width: 15px;
+      height: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 495px) {
+  .carousel-button {
+    display: none;
+  }
+}

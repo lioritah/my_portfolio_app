@@ -1,0 +1,68 @@
+
+.hero-container {
+  --hero-social-link-dimens: 35px;
+  --hero-socials-padding-vertical: 8px;
+  --hero-socials-padding-horizontal: 6px;
+
+  padding: calc(var(--navbar-height) + 13%) 4% calc(var(--navbar-height) + 25%) 4%;
+  position: relative;
+
+  .hero-socials {
+    width: 50px;
+    position: absolute;
+    left: 0;
+    top: calc(40% - (var(--hero-socials-padding-vertical) + var(--hero-social-link-dimens) + 10px));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: var(--hero-socials-padding-vertical) var(--hero-socials-padding-horizontal);
+    border-radius: 5px;
+    box-shadow: 0 0 12px 3px #ccc;
+    gap: 10px;
+
+    .hero-social-link {
+      width: var(--hero-social-link-dimens);
+      height: var(--hero-social-link-dimens);
+      border-radius: 5px;
+      padding: 8px;
+      transition: background-color 200ms linear;
+
+      &:hover {
+        background-color: hsl(220, 80%, 93%);
+      }
+
+      .hero-social-link-image {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .hero-title {
+    font-size: 90px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2.2px;
+  }
+  
+  .hero-subtitle {
+    font-size: 26px;
+    margin-top: 2.2rem;
+  }
+}
+
+@media screen and (max-width: 1085px) {
+  .hero-container {
+    padding: calc(var(--navbar-height)) 4% calc(var(--navbar-height) + 20%) 3%;
+
+    .hero-title {
+      font-size: 70px;
+    }
+
+    .hero-socials {
+      display: none;
+    }
+  }
+}

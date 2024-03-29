@@ -1,0 +1,18 @@
+
+.tech-stack-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  .tech-tiles-frame {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin: auto;
+  }
+
+  .tech-stack-title {
+    text-align: center;
+  }
+}
