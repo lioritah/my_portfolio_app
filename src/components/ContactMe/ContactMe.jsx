@@ -90,7 +90,7 @@ export default function ContactMe() {
       <h2 className="contact-me-title">
         Interested in hiring me? <br />
         Call me on{" "}
-        <a href="tel:0523017070" className="contact-me-phone-number">
+        <a href="tel:0524017070" className="contact-me-phone-number">
           052-4017070
         </a>{" "}
         or send me a message!
